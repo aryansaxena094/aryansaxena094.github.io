@@ -29,7 +29,7 @@ Technologies Used
 
 - bash
 Copy code
-"`"git clone https://github.com/username/repo-name.git"`"
+`"git clone https://github.com/username/repo-name.git"`
 
 - Open the index.html file in your web browser.
 
