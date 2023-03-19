@@ -49,16 +49,20 @@ body{
     margin: 5% 3% 5% 0;
 }
 .title-image{
-    width: 70%;
-    transform: rotate(20deg);
+    width: 35%;
+    transform: rotate(15deg);
+    position:absolute;
 }
 
 #features{
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
 }
+
 .feature-box{
-    text-align: center;
     padding: 5%;
+    text-align: center;
 }
 .icon{
     color : #ef8172;
@@ -99,4 +103,15 @@ body{
 
 .pricing-column {
     padding: 3% 2% 2%;
+}
+
+@media (max-width: 1028px){
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        position:static;
+        transform: rotate(0);
+        width:35%;
+    }
 }
