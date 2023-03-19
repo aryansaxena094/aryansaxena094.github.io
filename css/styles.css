@@ -5,7 +5,21 @@
 h1{
     font-family:"Montserrat";
     line-height: 1.5;
+    font-size: 3.5rem;
+    font-weight:bold;
+}
+h2{
+    font-family: "Montserrat";
+    line-height: 1.5;
     font-size: 3rem;
+    font-weight: bold;
+}
+h3{
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+p{
+    color: #afafaf;
 }
 body{
     font-family:"Montserrat";
@@ -36,6 +50,41 @@ body{
 }
 .title-image{
     width: 70%;
-    transform: rotate(30deg);
+    transform: rotate(20deg);
 }
 
+#features{
+    padding: 7% 15%;
+}
+.feature-box{
+    text-align: center;
+    padding: 5%;
+}
+.icon{
+    color : #ef8172;
+    padding: 5%;
+}
+.icon:hover{
+    color:#ff4c68;
+}
+#testimonials {
+    padding: 7% 15%;
+    text-align: center;
+    background-color: #ef8172;
+    color: #fff;
+}
+.testimonial-image{
+    width: 30%;
+    border-radius: 100%;
+}
+
+#press{
+    padding-bottom: 3%;
+    background-color: #ef8172;
+    text-align: center;
+}
+
+.press-img{
+    width: 15%;
+    margin: 20px 20px 50px;
+}
