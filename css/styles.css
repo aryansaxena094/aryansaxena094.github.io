@@ -1,5 +1,5 @@
 #title{
-    background: #ff4c68;
+    background: #5648be;
     color: #fff;
 }
 h1{
@@ -65,15 +65,15 @@ body{
     text-align: center;
 }
 .icon{
-    color : #ef8172;
+    color : #7274e4;
     padding: 5%;
 }
 .icon:hover{
-    color:#ff4c68;
+    color:#5648be;
 }
 #testimonials {
     text-align: center;
-    background-color: #ef8172;
+    background-color: #5241d2;
     color: #fff;
 }
 .testimonial-image{
@@ -87,7 +87,7 @@ body{
 
 #press{
     padding-bottom: 3%;
-    background-color: #ef8172;
+    background-color: #5241d2;
     text-align: center;
 }
 
@@ -106,7 +106,7 @@ body{
 }
 
 #cta{
-    background-color: #ff4c68;
+    background-color: #5648be;
     color: #fff;
     padding: 7% 15%;
     text-align: center;
