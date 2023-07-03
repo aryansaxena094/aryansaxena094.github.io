@@ -20,6 +20,8 @@
     
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/4438cf7b7c.js" crossorigin="anonymous"></script>
+
+    
     
 </head>
 
@@ -51,8 +53,8 @@
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <h1>I may not always be right, but I'll never stop trying to prove it.</h1>
-                    <button type="button" class="btn btn-dark btn-lg top-buttons"><i class="fa-solid fa-inbox"></i> Mail Me</button>
-                    <button type="button" class="btn btn-outline-light btn-lg top-buttons"><i class="fa-brands fa-whatsapp"></i> Text Me</button>
+                    <button id = "mailMeButton" type="button" class="btn btn-dark btn-lg top-buttons"><i class="fa-solid fa-inbox"></i> Mail Me</button>
+                    <button id="textMeButton" type="button" class="btn btn-outline-light btn-lg top-buttons"><i class="fa-brands fa-whatsapp"></i> Text Me</button>
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12">
                     <img class="title-image" src="images/AryanIMG.png" alt="iphone-mockup">
@@ -174,7 +176,7 @@
                         <p>No Replies</p>
                         <p>1 call/2mos</p>
                         <p>Small Talk only</p>
-                        <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign Up</button>
+                        <button id="acquaintanceButton" type="button" class="w-100 btn btn-lg btn-outline-dark">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -190,7 +192,7 @@
                         <p>1x'How are you?'/mo</p>
                         <p>Deep talks post drinks only</p>
                         
-                        <button type="button" class="w-100 btn btn-lg btn-dark">Sign Up</button>
+                        <button id="friendButton" type="button" class="w-100 btn btn-lg btn-dark">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -206,7 +208,7 @@
                         <p>4x'How are you?'/mo</p>
                         <p>Deep talks allowed*</p>
                         
-                        <button type="button" class="w-100 btn btn-lg btn-dark">Sign Up</button>
+                        <button id="datingButton" type="button" class="w-100 btn btn-lg btn-dark">Sign Up</button>
                     </div>
                 </div>
             </div>
@@ -235,6 +237,37 @@
     <p>©Aryan Saxena</p>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Your AWS API Gateway URL
+        const API_URL = "https://eue37rga69.execute-api.ca-central-1.amazonaws.com/Dev";
+
+        // Button click events
+        $('button').click(function() {
+            let buttonClicked = $(this).text().trim();
+
+            // Prepare the data to send
+            const data = {
+                buttonClicked: buttonClicked,
+            };
+        
+            // Send data to AWS API Gateway
+            $.ajax({
+                url: API_URL,
+                type: "POST",
+                data: JSON.stringify(data),
+                contentType: "application/json",
+                success: function() {
+                    console.log("Data sent successfully.");
+                },
+                error: function() {
+                    console.log("Error sending data.");
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 
